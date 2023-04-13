@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="./css/aos.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body id="home__body">
-    <p>
-      CMD
+    <main id="home__main">
+      <!-- home__home_section -->
+      <section id="home__home_section">
+        <div class="home_section__container container">
+          <div data-aos="fade-right" class="home_section__left">
+            <h1>Building stellar websites for early startups</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <div id="hl-l-important" class="home_left__links">
+              <button>View our work</button>
+              <a href="./pricing.html"
+                ><span>View Pricing </span
+                ><img
+                  src="./assets/images/home/home-left__arrow.svg"
+                  alt="link_arrow"
+              /></a>
+            </div>
+          </div>
+          <div data-aos="fade-left" class="home_section__right">
+            <img src="./assets/images/home/hom-right__bgimage.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- home__home_section -->
 
-    </p>
+      <section></section>
+    </main>
+
+    <script src="./js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
