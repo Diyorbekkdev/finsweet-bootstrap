@@ -13,6 +13,10 @@ $white: white;
 #home__home_section {
   background-color: $tint-blue;
   .home_section__container {
+    *a {
+      display: flex;
+      align-items: center;
+    }
     padding-top: 126px;
     padding-bottom: 128px;
     display: grid;
@@ -115,6 +119,265 @@ $white: white;
       button {
         margin-right: 0px;
         margin-bottom: 20px;
+      }
+    }
+  }
+}
+#home__projects {
+  overflow: hidden;
+  *a {
+    display: flex;
+    align-items: center;
+  }
+  padding-top: 57px;
+  padding-bottom: 128px;
+  .home__projects_container {
+    .home-project__caption {
+      margin-bottom: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        color: $tint-blue;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        span {
+          color: $tint-blue;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          margin-right: 16px;
+        }
+      }
+    }
+    .home-sec_cards {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      .main-card {
+        position: relative;
+        background-image: url(../../assets/images/home/home-sec-2-first-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 843px;
+        height: 600px;
+        .main-card-hover {
+          padding-left: 48px;
+          position: absolute;
+          opacity: 0;
+          left: -2%;
+          height: 100%;
+          width: 47%;
+          transition: 0.4s;
+          background: linear-gradient(
+            329.39deg,
+            #1c1e53 -10.96%,
+            rgba(28, 30, 83, 0.42) 103.96%
+          );
+          h2 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            color: $white;
+            max-width: 313px;
+            margin-top: 312px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 293px;
+            margin-top: 16px;
+            margin-bottom: 40px;
+            color: #dddde5;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            span {
+              color: $mixed-color;
+              margin-right: 16px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 28px;
+            }
+          }
+        }
+        &:hover {
+          .main-card-hover {
+            opacity: 1;
+            left: 0px;
+          }
+        }
+      }
+      .main-card_right {
+        .mr-card {
+          position: relative;
+          right: 0px;
+          background-image: url(../../assets/images/home/home-sec-2-second-bg.png);
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 405px;
+          height: 284px;
+          &:hover {
+            .mr-card-hover {
+              opacity: 1;
+              right: 0px;
+            }
+          }
+          .mr-card-hover {
+            padding-left: 56px;
+            position: absolute;
+            opacity: 0;
+            height: 100%;
+            width: 100%;
+            transition: 0.4s;
+            background: linear-gradient(
+              329.39deg,
+              #1c1e53 -10.96%,
+              rgba(28, 30, 83, 0.42) 103.96%
+            );
+            h2 {
+              margin-top: 129px;
+              color: $white;
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 36px;
+              margin-bottom: 10px;
+              max-width: 220px;
+            }
+            a {
+              span {
+                margin-right: 16px;
+                color: $mixed-color;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+              }
+            }
+          }
+        }
+        .mr-card:last-child {
+          h2 {
+            max-width: 200px;
+          }
+          margin-top: 32px;
+          background-image: url(../../assets/images/home/home-sec-2-third-bg.png);
+        }
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    .home__projects_container {
+      .home-sec_cards {
+        display: flex;
+        flex-direction: column;
+        .main-card {
+          margin-bottom: 32px;
+          width: 100%;
+          .main-card-hover {
+            padding-left: 30px;
+            padding-right: 10px;
+            h2 {
+              margin-top: 200px;
+            }
+          }
+        }
+        .main-card_right {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 15px;
+          .mr-card {
+            width: 100%;
+            padding-left: 20px;
+            .mr-card-hover {
+              h2 {
+                margin-top: 20px;
+              }
+            }
+            height: 150px;
+          }
+          .mr-card:last-child {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    .home__projects_container {
+      .home-sec_cards {
+        .main-card {
+          height: 400px;
+          .main-card-hover {
+            h2 {
+              margin-top: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 580px) {
+    .mr-card {
+      span {
+        margin-right: 4px !important;
+      }
+      .mr-card-hover {
+        padding-left: 15px !important;
+      }
+      height: 200px !important;
+    }
+  }
+  @media (max-width: 560px) {
+    .home__projects_container {
+      .home-sec_cards {
+        .main-card {
+          height: 300px;
+          .main-card-hover {
+            h2 {
+              margin-top: 30px;
+              width: 100%;
+              font-size: 24px;
+              line-height: 120%;
+              margin-bottom: 0px;
+            }
+            p {
+              margin-top: 10px;
+              font-size: 16px;
+              line-height: 130%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    .home__projects_container {
+      .home-sec_cards {
+        .main-card {
+          height: 300px;
+          .main-card-hover {
+            h2 {
+              margin-top: 40px;
+              width: 100%;
+              font-size: 20px;
+              line-height: 120%;
+              margin-bottom: 0px;
+            }
+            p {
+              margin-top: 10px;
+              font-size: 14px;
+              line-height: 130%;
+              margin-bottom: 10px;
+            }
+          }
+        }
       }
     }
   }
