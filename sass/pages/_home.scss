@@ -9,7 +9,9 @@ $navy-grey: #eef4fa;
 $mixed-color: #fcd980;
 $dark: #000000;
 $white: white;
-
+// #home__body {
+//   overflow-x: hidden;
+// }
 #home__home_section {
   background-color: $tint-blue;
   .home_section__container {
@@ -416,8 +418,7 @@ $white: white;
       grid-gap: 32px;
       .home_design__card {
         padding: 48px 45px 48px;
-        background-color: $white;
-
+        background: $white;
         &:hover {
           cursor: pointer;
           background: linear-gradient(
@@ -547,4 +548,34 @@ $white: white;
       }
     }
   }
+}
+.home__carousel_container {
+  display: flex;
+}
+@media (max-width: 1210px) {
+  .home__carousel_container {
+    flex-direction: column;
+    .home-carouse__left {
+      width: 100%;
+      h1, p {
+        max-width: 700px;
+        text-align: center !important;
+        margin-left: auto;
+      margin-right: auto;
+      }
+    }
+    .home-carousel__right {
+      width: 100% !important;
+    }
+  }
+}
+.home-carouse__left {
+  width: 30%;
+  h1,
+  p {
+    text-align: left !important;
+  }
+}
+.home-carousel__right {
+  width: 70%;
 }
