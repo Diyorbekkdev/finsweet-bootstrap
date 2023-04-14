@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
+
 $royal-blue: #2405f2;
 $dark-blue: #282938;
 $grey: #f4f6fc;
@@ -12,7 +13,11 @@ $white: white;
 // #home__body {
 //   overflow-x: hidden;
 // }
+
+
+
 #home__home_section {
+  margin-top: 50px;
   background-color: $tint-blue;
   .home_section__container {
     *a {
@@ -56,6 +61,7 @@ $white: white;
         a {
           display: flex;
           align-items: center;
+          text-decoration: none;
           span {
             font-weight: 500;
             font-size: 16px;
@@ -160,6 +166,9 @@ $white: white;
     .home-sec_cards {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      a{
+        text-decoration: none;
+      }
       .main-card {
         position: relative;
         background-image: url(../../assets/images/home/home-sec-2-first-bg.png);
@@ -578,4 +587,28 @@ $white: white;
 }
 .home-carousel__right {
   width: 70%;
+}
+
+
+.main_bg_img{
+  animation-name: fadeUp;
+  animation-duration: 4s;
+  transition: .5s ease-out;
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes fadeUp{
+  0%{
+    transition: .6s ease-out;
+    transform: translateY(0px);
+  }
+  50%{
+    transition: .6s ease-out;
+    transform: translateY(-20px);
+  }
+  100%{
+    transition: .6s ease-out;
+    transform: translateY(0);
+  }
 }
