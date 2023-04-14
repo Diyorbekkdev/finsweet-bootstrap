@@ -1554,6 +1554,24 @@ template {
   width: 41%;
   padding-bottom: 50px;
 }
+.container .pricing_text h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 64px;
+  color: #282938;
+}
+@media (max-width: 760px) {
+  .container .pricing_text {
+    width: 60%;
+  }
+}
+@media (max-width: 400px) {
+  .container .pricing_text {
+    width: 100%;
+  }
+}
 
 .cards .cards_container {
   position: relative;

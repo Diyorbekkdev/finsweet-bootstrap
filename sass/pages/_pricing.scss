@@ -8,6 +8,20 @@
   text-align: center;
   width: 41%;
   padding-bottom: 50px;
+  h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 64px;
+    color: #282938;
+  }
+  @media (max-width: 760px) {
+    width: 60%;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }
 
 .cards {
@@ -49,8 +63,6 @@
     width: 33%;
     @media (min-width: 200px) {
       width: 100%;
-    }
-    @media (min-width: 650px) {
     }
   }
   .pr_d {
@@ -150,9 +162,8 @@
   }
 }
 
-.asked{
-    margin: 0 auto;
-    
+.asked {
+  margin: 0 auto;
 }
 
 .asked_container {
@@ -160,18 +171,18 @@
   margin-bottom: 128px;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 675px){
+  @media (max-width: 675px) {
     display: flex;
     flex-direction: column;
   }
-  .asked{
-    @media(max-width: 675px){
-        text-align: center;
+  .asked {
+    @media (max-width: 675px) {
+      text-align: center;
     }
   }
   .wd {
-    @media (max-width: 675px){
-        margin-top: 25px;
+    @media (max-width: 675px) {
+      margin-top: 25px;
     }
     width: 100%;
   }
