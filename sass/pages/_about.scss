@@ -1,2 +1,224 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.about-main h1,
+.about-main h2,
+.about-main h3,
+.about-main h4,
+.about-main h5,
+.about-main h6,
+.about-main p {
+  color: $dark-blue;
+}
+#about-body{
+  position: relative;
+  overflow-x: hidden;
+}
+#section-1 {
+  padding-top: 220px;
+}
+.about-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .about1-content {
+    max-width: 484px;
+    .p-1 {
+      // @include label(label1);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 32px;
+    }
+    .p-2 {
+      font-size: 16px;
+      line-height: 28px;
+      text-align: justify;
+      opacity: 0.7;
+      margin-top: 30px;
+    }
+    h1 {
+      @include heading(h1);
+      font-weight: 600;
+      font-size: 54px;
+      line-height: 74px;
+      padding-top: 8px;
+    }
+  }
+  .about1-img {
+    img {
+      width: 100%;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+}
+
+#section-2 {
+  padding: 125px 0;
+  @media (max-width: 1230px) {
+    .container {
+      padding: 0;
+    }
+  }
+}
+.about-2 {
+  .about2-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 96px 80px;
+    background-color: #f4f5f5;
+    @media (max-width: 1230px) {
+      flex-direction: column;
+    }
+    @media (max-width: 537px) {
+      display: none;
+    }
+    div {
+      max-width: 515px;
+      h3 {
+        font-weight: 600;
+        font-size: 38px;
+        line-height: 56px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        opacity: 0.7;
+        margin-top: 16px;
+      }
+    }
+  }
+  .about-accordion {
+    display: none;
+    @media (max-width: 537px) {
+      display: block;
+    }
+    .accordion-button {
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--bs-accordion-btn-color);
+      text-align: left;
+      background-color: #f4f6fc;
+      border: 0;
+      border-radius: 10px;
+    }
+  }
+  .about2-img {
+    img {
+      width: 100%;
+    }
+    @media (max-width: 537px) {
+      margin-top: 10px;
+    }
+  }
+}
+
+#section-3 {
+  background-color: $grey;
+  padding: 128px 0
+}
+.about-3 {
+  .top {
+    h2 {
+      @include heading(h2);
+      text-align: center;
+    }
+  }
+  .about3-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // justify-content: space-between;
+    grid-gap: 20px;
+    margin-top: 48px;
+    @media(max-width:1230px){
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media(max-width:970px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(max-width:650px){
+      grid-template-columns: repeat(1,1fr);
+    }
+    .card-item {
+      width: 296px;
+      padding: 48px 64px;
+      background-color: white;
+      margin: 0 auto; 
+      transition: 0.4s;
+      .card-avatar {
+        height: 168px;
+        width: 168px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-image: url(../../assets/images/about/man-in-black-suit-holding-a-calling-card-3785104.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .hidden-media {
+          width: 100%;
+          height: 100%;
+          align-items: flex-end;
+          opacity: 0;
+          display: flex;
+          padding-bottom: 0px;
+          justify-content: center;
+          gap: 10px;
+          text-align: center;
+          margin-bottom: 0px;
+          transition: 0.4s;
+          border-radius: 50%;
+          i {
+            color: white;
+          }
+        }
+      }
+      .card-name {
+        text-align: center;
+        margin-top: 30px;
+        h6 {
+          @include heading(h6);
+        }
+        p {
+          opacity: 0.7;
+          margin-bottom: 0;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        .hidden-media {
+          opacity: 1;
+          padding-bottom: 30px;
+          background: linear-gradient(
+            348.37deg,
+            #5239fa 17.97%,
+            rgba(255, 255, 255, 0) 79.2%
+          );
+        }
+      }
+      #a-2{
+        background-image: url(../../assets/images/about/serious-man-3760373.png);
+      }
+      #a-3{
+        background-image: url(../../assets/images/about/man-in-white-shirt-wearing-blue-bucket-hat-6626874.png);
+      }
+      #a-4{
+        background-image: url(../../assets/images/about/transgender-model-touching-forehead-in-neon-light-7613875.png);
+      }
+    }
+    #card-3{
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
